@@ -192,5 +192,24 @@ sortActionButton.addEventListener('click', () => {
 addActionButton.addEventListener('click', () => {
   // TODO: создание и добавление нового фрукта в массив fruits
   // необходимые значения берем из kindInput, colorInput, weightInput
+  let temp = document.createElement('li.fruit__item.fruit_violet');
+  let k = kindInput.value;
+  let c = colorInput.value;
+  let w = weightInput.value;
+  fruits[fruits.length] = {
+    'kind' : k,
+    'color' : c,
+    'weight' : w
+  }
+  temp.className = 'fruit__item fruit_violet';
+  temp.innerHTML = `
+    <div class="fruit__info">
+      <div>index: ${fruits.length}</div>
+      <div>kind: ${k}</div>
+      <div>color: ${c}</div>
+      <div>weight (кг): ${w}</div>
+    </div>`
+  fruitsList.appendChild(temp);
+
   display();
 });
