@@ -201,15 +201,6 @@ addActionButton.addEventListener('click', () => {
     'color' : c,
     'weight' : w
   }
-  temp.className = 'fruit__item fruit_violet';
-  temp.innerHTML = `
-    <div class="fruit__info">
-      <div>index: ${fruits.length}</div>
-      <div>kind: ${k}</div>
-      <div>color: ${c}</div>
-      <div>weight (кг): ${w}</div>
-    </div>`
-  fruitsList.appendChild(temp);
-
+  if (!k || !c || !w) { alert('Attention. EMPTY FIELD') }
   display();
 });
